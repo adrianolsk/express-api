@@ -1,0 +1,14 @@
+version: "3"
+services:
+    express:
+        image: 159.203.89.152:5000/my_express
+        container_name: express
+#        volumes:
+#            - ./log:/var/log/cronLog
+#            - ./cron:/etc/cron.d/
+#            - ./:/app/
+        restart: always
+        ports:
+          - "3000:3000"
+#network_mode: host
+
