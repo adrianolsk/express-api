@@ -13,7 +13,7 @@ node {
      sh 'docker build -t my_express -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker run --rm my_express'
+      sh 'docker run --rm --detach my_express '
     }
     stage('Clean Docker test'){
       sh 'docker rmi my_express'
