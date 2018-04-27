@@ -21,9 +21,9 @@ node {
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
         sh 'docker build -t my_express --no-cache .'
-        sh 'docker tag my_express registry:5000/my_express-app'
-        sh 'docker push registry:5000/my_express'
-        sh 'docker rmi -f react-app localhost:5000/react-app'
+        sh 'docker tag my_express localhost:5000/my_express'
+        sh 'docker push localhost:5000/my_express'
+        sh 'docker rmi -f react-app localhost:5000/my_express-app'
       }
     }
   }
