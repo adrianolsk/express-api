@@ -16,7 +16,7 @@ node {
       sh 'docker run --rm --detach my_express '
     }
     stage('Clean Docker test'){
-      sh 'docker rmi my_express'
+      sh 'docker rmi -f my_express'
     }
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
