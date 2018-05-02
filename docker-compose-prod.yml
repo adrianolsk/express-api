@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
     express:
         image: 159.203.89.152:5000/my_express
