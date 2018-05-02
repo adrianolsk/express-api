@@ -7,9 +7,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 //ok 7
 
 app.get("/", function(req, res) {
-    res.send('oi ' +JSON.stringify(req.query, null, 2));
+    res.send('oi aqui ' +JSON.stringify(req.query, null, 2));
 });
 
 app.listen(3000, function() {
     console.log("It works!");
 });
+
+
