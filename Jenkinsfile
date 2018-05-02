@@ -26,6 +26,14 @@ node {
         sh 'docker rmi -f react-app localhost:5000/my_express'
       }
     }
+    stage('start'){
+        sh 'scp docker-compose-prod.yml root@zuntaz.com:/root/express/docker-compose.yml'
+        sh 'ssh root@zuntaz.com << TESTE'
+        sh 'cd express'
+        sh 'docker-compose up -d'
+        sh 'TESTE'
+
+    }
   }
   catch (err) {
     throw err
