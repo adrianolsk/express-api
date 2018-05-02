@@ -27,7 +27,7 @@ node {
       }
     }
     stage('start'){
-        sh 'scp docker-compose-prod.yml root@zuntaz.com:/root/express/docker-compose.yml'
+        sh 'scp docker-compose-prod.yml zuntaz.com:/root/express/docker-compose.yml'
         sh 'ssh root@zuntaz.com << TESTE'
         sh 'cd express'
         sh 'docker-compose up -d'
